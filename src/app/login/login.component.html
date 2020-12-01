@@ -1,0 +1,37 @@
+<div class="container-fluid h-100">
+    <div class="container w-50 mx-auto">
+        <h1 class="text-center">Login</h1>
+        <mat-card class=" ">
+            <form [formGroup]="loginform" (ngSubmit)="onSubmit(loginform.value)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="w-100">
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>username</mat-label>
+                                    <input type="text" placeholder="Nama Pengguna" formControlName="username" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="w-100">
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>password</mat-label>
+                                    <input type="password" placeholder="Kata Sandi" formControlName="password" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="w-100">
+                                <button mat-raised-button color="accent" type="submit" class="w-100">MASUK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </mat-card>
+        <div class="mx-auto text-center p-4">
+            <a class="text-center" routerLink="/daftar" routerLinkActive="active">Daftar</a>
+        </div>
+    </div>
+</div>
